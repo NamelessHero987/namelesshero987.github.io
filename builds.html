@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Bobby developer">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="apple-mobile-web-app-title" content="Bobby developer">
+		<meta name="application-name" content="Bobby developer">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<title>Builds</title>
+		<style>
+			/*BODY*/
+			body {
+				background-color: #cfd3f0;
+				margin: 0;
+				text-align: center;
+			}
+			#theBody {
+				margin: 0 auto;
+				background-color: #175A7D;
+				font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
+				max-width: 790px;
+			}
+			#upDivider {
+				height: 30px;
+				background-color: #2E2E33;
+				box-shadow: 0 5px 5px #151517;
+			}
+			.home {
+				width: 18px;
+				padding: 7px 5px 5px 5px;
+			}
+			/*UP BUTTON*/
+			#back_top {
+				position: fixed;
+				bottom: 10px;
+				cursor: pointer;
+				background-color: #175A7D;
+				padding: 2px 5px 4px 4px;
+				right: 20px;
+				display: none;
+				border: 1px solid black;
+				box-shadow: 0 1px 1px #151517;
+			}
+			.icon {
+				width: 18px;
+			}
+			/*CONTAINER*/
+			.container {
+				padding-bottom: 15px;
+			}
+			/*TITLE*/
+			h1 {
+				color: #fff;
+				margin-bottom: 30px;
+			}
+			/*OTHER*/
+			#other {
+				font-size: 14px;
+				background-color: #2E2E33;
+				color: #FFF;
+				padding: 10px 0 15px 0;
+				margin-bottom: 25px;
+				border-top: 1px solid #FFF;
+				border-bottom: 1px solid #FFF;
+			}
+			/*BUILDS*/
+			.container ul {
+				margin: 0;
+				padding: 10px 10px 30px 10px;
+			}
+			.container li {
+				list-style-type: none;
+				margin-top: 7px;
+			}
+			#firstBuild {
+				box-shadow: 0px -5px 5px #151517;
+				background-color: #2E2E33;
+				color: #FFF;
+				padding: 5px;
+			}
+			.category {
+				background-color: #2E2E33;
+				color: #FFF;
+				padding: 5px;
+			}
+			p {
+				font-weight: 400;
+				margin: 0;
+			}
+			#microatx {
+				background-color: #95CBFF;
+			}
+			#laptop {
+				background-color: #91CBCA;
+			}
+			#itx {
+				background-color: #E995BA;
+			}
+			/*END*/
+			#end {
+				height: 10px;
+				background-color: #2E2E33;
+				box-shadow: 0 5px 5px #151517;
+			}
+			@media screen and (max-width: 670px) {
+				* {
+					scroll-margin-top: 6rem;
+				}
+				#back_top {
+					right: 0;
+					margin-right: 10px;
+				}
+				nav {
+					display: none;
+				}
+				#mobile_nav {
+					display: block;
+					height: 90px;
+				}
+				#mobile_nav a {
+					padding: 0 15px 0 15px;
+				}
+			}
+			@media screen and (max-width: 450px) {
+				#mobile_nav a {
+					padding: 0 10px 0 10px;
+				}
+			}
+			@media screen and (max-width: 350px) {
+				body {
+					background-color: #FFFAED;
+				}
+				#theBody {
+					border: 0;
+				}
+				#mobile_nav {
+					display: none;
+				}
+				h1 {
+					margin-top: 0;
+					border-top: 1px solid #2E2E33;
+					padding: 20px 2px 0 2px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="theBody">
+			<div id="upDivider"><a id="home" href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="home"></a></div>
+			<div class="container">
+				<h1>BUILDS</h1>
+				<div id="other">
+					<b>Steam Deck</b>
+					<p>+ Sabrent NVMe 256GB + SanDisk MicroSD 256GB</p>
+					<b>Raspberry Pi4 2GB</b>
+					<p>+ Samsung MicroSD 128GB</p>
+				</div>
+				<div id="firstBuild"><h3 id="01">The MicroATX</h3></div>
+				<ul id="microatx">
+					<li><b>CASE</b>
+					<br><p>Lian Li LANCOOL 205M Black</p></li>
+					<li><b>PSU</b>
+					<br><p>Seasonic FOCUS GX-550</p></li>
+					<li><b>MB</b>
+					<br><p>MSI B550M PRO-VDH WIFI</p></li>
+					<li><b>CPU</b>
+					<br><p>AMD Ryzen 5 5600X (Zen3 6/12)</p></li>
+					<li><b>COOLER</b>
+					<br><p>Be Quiet! Dark Rock 4</p></li>
+					<li><b>RAM</b>
+					<br><p></p></li>
+					<li><b>VGA</b>
+					<br><p>NVIDIA 3060Ti Founders 8GB GDDR6</p></li>
+					<li><b>NVMe</b>
+					<br><p>Kingston FURY Renegade 2TB (gen4)
+					<br>WD BLACK SN750 500GB (gen3)</p></li>
+					<li><b>SSD</b>
+					<br><p>Crucial MX500 1TB</p></li>
+					<li><b>OS</b>
+					<br><p>Windows 11 Pro</p></li>
+				</ul>
+				<div class="category"><h3 id="02">The Notebook</h3></div>
+				<ul id="laptop">
+					<li><b>MODEL</b>
+					<br><p>IdeaPad Gaming 3 15ARH05</p></li>
+					<li><b>CPU</b>
+					<br><p>AMD Ryzen 7 4800H (Zen2 8/16)</p></li>
+					<li><b>RAM</b>
+					<br><p>Crucial 2x16GB 2R 3200 CL22</p></li>
+					<li><b>VGA</b>
+					<br><p>NVIDIA 1650Ti 4GB GDDR6</p></li>
+					<li><b>NVMe</b>
+					<br><p>SK Hynix 512GB</p></li>
+					<li><b>SSD</b>
+					<br><p>WD Green 480GB</p></li>
+					<li><b>OS</b>
+					<br><p>Windows 11 Home</p></li>
+					<li><b>OTHER</b>
+					<br><p>PSU 135W - Display 15.6'' IPS FHD 60Hz
+						<br>BT 5.1 - WiFi AC - LAN1000 - WebCam 720p
+						<br>Blue Backlit Keyboard</p></li>
+				</ul>
+				<div class="category"><h3 id="07">The MiniITX</h3></div>
+				<ul id="itx">
+					<li><b>Work in progress...</b>
+					<br><p></p></li>
+					<li><b>RAM</b>
+					<br><p>Crucial 2x8GB 1R 3600 CL16</p></li>
+					<li><b>VGA</b>
+					<br><p>PNY GTX 970 4GB GDDR5</p></li>
+					<li><b>NVMe</b>
+					<br><p>Lexar NM620 512GB (gen3)</p></li>
+					<li><b>OS</b>
+					<br><p>Kubuntu 22.04 LTS</p></li>
+					<li><b></b>
+					<br><p></p></li>
+					<li><b></b>
+					<br><p></p></li>
+				</ul>
+				<div id="end"></div>
+				<br>
+				<div onclick="topFunction()" id="back_top"><img src="img/up.png" alt="up" class="icon"></div>
+			</div>
+		</div>
+		<script>
+			function watchForHover() {
+			  let lastTouchTime = 0
+
+			  function enableHover() {
+				if (new Date() - lastTouchTime < 500) return
+				document.body.classList.add('hasHover')
+			  }
+
+			  function disableHover() {
+				document.body.classList.remove('hasHover')
+			  }
+
+			  function updateLastTouchTime() {
+				lastTouchTime = new Date()
+			  }
+
+			  document.addEventListener('touchstart', updateLastTouchTime, true)
+			  document.addEventListener('touchstart', disableHover, true)
+			  document.addEventListener('mousemove', enableHover, true)
+
+			  enableHover()
+			};
+			function scrollFunction() {
+			  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			};
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			};
+			
+			watchForHover();
+			
+			let mybutton = document.getElementById("back_top");
+			window.onscroll = function() {scrollFunction()};
+		</script>
+	</body>
+</html>
