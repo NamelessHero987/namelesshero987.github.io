@@ -69,7 +69,7 @@
 			@keyframes animation {
 				0%   {color:#95CBFF; top:0px;}
 				25%  {color:#91CBCA; top:200px;}
-				50%  {color:#FECB98; top:400px;}
+				50%  {color:#FECB98; top:450px;}
 				75%  {color:#d6f1be; top:200px;}
 				100% {color:#c2a8e4; top:0px;}
 			}
@@ -82,7 +82,7 @@
 			}
 			.contact {
 				margin: 100px 50px 50px 50px;
-				border: 1px solid #fff;
+				border: 2px solid #fff;
 			}
 			h4 {
 				font-size: 18px;
@@ -110,10 +110,24 @@
 					margin: 50px 30px 50px 30px;
 					border: 1px solid #fff;
 				}
+				@keyframes animation {
+					0%   {color:#95CBFF; top:0px;}
+					25%  {color:#91CBCA; top:170px;}
+					50%  {color:#FECB98; top:400px;}
+					75%  {color:#d6f1be; top:170px;}
+					100% {color:#c2a8e4; top:0px;}
+				}
 			}
 			@media screen and (max-width: 325px) {
 				.contact {
 					border: none;
+				}
+				@keyframes animation {
+					0%   {color:#95CBFF; top:0px;}
+					25%  {color:#91CBCA; top:200px;}
+					50%  {color:#FECB98; top:400px;}
+					75%  {color:#d6f1be; top:200px;}
+					100% {color:#c2a8e4; top:0px;}
 				}
 			}
 		</style>
@@ -127,10 +141,11 @@
 			<hr width="100px;">
 		</h3>
 		<div class="contact">
-			<a href="builds.html">BUILDS <img src="img/builds.png" alt="builds" class="image"></a>
+			<br><a href="builds.html">BUILDS <img src="img/builds.png" alt="builds" class="image"></a>
 			<br><a href="software.html">SOFTWARE <img src="img/software.png" alt="software" class="image"></a>
 			<br><a href="pictures.html">PICTURES <img src="img/pictures.png" alt="pictures" class="image"></a>
 			<br><a href="deck.html">STEAM DECK <img src="img/games.png" alt="games" class="image"></a>
+			<br><br>
 		</div>
 		<div class="contact">
 			<h4>CONTACT FORM</h4>
