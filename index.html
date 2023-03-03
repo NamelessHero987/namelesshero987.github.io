@@ -93,7 +93,7 @@
 				display: inline-block;
 				font-size: 16px;
 				cursor: pointer;
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 			}
 			@media screen and (max-width: 600px) {
 				h3 {
@@ -101,7 +101,7 @@
 					padding: 2px;
 				}
 				#contact {
-					margin: 50px 30px 0 30px;
+					margin: 50px 30px 50px 30px;
 					border: 1px solid #fff;
 				}
 			}
@@ -126,22 +126,29 @@
 		<div id="contact">
 			<h4>Contact form</h4>
 			<form action="https://submit-form.com/M73WJz58">
-			  <label for="name">Name</label>
-			  <br>
-			  <input type="text" id="name" name="name" placeholder="" required="" />
-			  <br>
-			  <label for="email">Email</label>
-			  <br>
-			  <input type="email" id="email" name="email" placeholder="" required="" />
-			  <br>
-			  <label for="message">Message</label>
-			  <br>
-			  <textarea
-				id="message"
-				name="message"
-				placeholder=""
-				required=""
-			  ></textarea>
+				<input type="hidden" name="_error" value="https://bobbydeveloper.com/error" />
+				<input type="hidden" name="_redirect"value="https://bobbydeveloper.com/success" />
+				<label for="name">Name</label>
+				<br>
+				<input type="text" id="name" name="name" placeholder="" required="" />
+				<br>
+				<label for="email">Email</label>
+				<br>
+				<input type="email" id="email" name="email" placeholder="" required="" />
+				<br>
+				<label for="message">Message (200 digits)</label>
+				<br>
+				<textarea
+					id="message"
+					name="message"
+					placeholder=""
+					required=""
+					rows="4" 
+					cols="25"
+					maxlength="200"
+					style="resize:none"
+				>
+				</textarea>
 			  <br>
 			  <button id="button" type="submit">Send</button>
 			</form>
