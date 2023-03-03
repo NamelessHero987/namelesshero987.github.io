@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Bobby developer">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="apple-mobile-web-app-title" content="Bobby developer">
+		<meta name="application-name" content="Bobby developer">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<title>Software List</title>
+		<style>
+			/*BODY*/
+			body {
+				background-color: #cfd3f0;
+				margin: 0;
+				text-align: center;
+			}
+			#theBody {
+				margin: 0 auto;
+				background-color: #175A7D;
+				font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
+				max-width: 790px;
+			}
+			/*SCROLL*/
+			* {
+			  scroll-margin-top: 5.5rem;
+			}
+			/*UP BUTTON*/
+			#back_top {
+				position: fixed;
+				bottom: 10px;
+				cursor: pointer;
+				background-color: #175A7D;
+				padding: 2px 5px 4px 4px;
+				right: 20px;
+				display: none;
+				border: 1px solid black;
+				box-shadow: 0 1px 1px #151517;
+			}
+			/*MENU*/
+			#upDivider {
+				height: 30px;
+				background-color: #2E2E33;
+				box-shadow: 0 5px 5px #151517;
+				display: none;
+			}
+			nav {
+				position: fixed;
+				width: 100%;
+				max-width: 790px;
+				height: 90px;
+				background-color: #2E2E33;
+				cursor: default;
+				box-shadow: 0 5px 5px #151517;
+			}
+			.home {
+				border: none;
+				box-shadow: none;
+			}
+			.homeIMG {
+				width: 18px;
+				padding: 7px 5px 5px 5px;
+			}
+			nav div {
+				margin: 5px;
+			}
+			nav a {
+				width: 90px;
+				padding: 0 25px 0 25px;
+				border: 2px solid;
+				text-decoration: none;
+				box-shadow: 0 5px 5px #151517;
+			}
+			nav a:first-of-type:link, nav a:first-of-type:visited {
+				color: #95CBFF;
+			}
+			nav a:nth-of-type(2):link, nav a:nth-of-type(2):visited {
+				color: #91CBCA;
+			}
+			nav a:nth-of-type(3):link, nav a:nth-of-type(3):visited {
+				color: #E995BA;
+			}
+			nav a:nth-of-type(4):link, nav a:nth-of-type(4):visited {
+				color: #c2a8e4;
+			}
+			body.hasHover nav a:first-of-type:hover, 
+			body.hasHover nav a:nth-of-type(2):hover, 
+			body.hasHover nav a:nth-of-type(3):hover, 
+			body.hasHover nav a:nth-of-type(4):hover {
+				color: #FFF;
+			}
+			nav a:first-of-type:active {
+				color: #95CBFF;
+			}
+			nav a:nth-of-type(2):active {
+				color: #91CBCA;
+			}
+			nav a:nth-of-type(3):active {
+				color: #E995BA;
+			}
+			nav a:nth-of-type(4):active {
+				color: #c2a8e4;
+			}
+			#mobile_nav {
+				display: none;
+			}
+			/*CONTAINER*/
+			.container {
+				padding-top: 85px;
+				padding-bottom: 15px;
+			}
+			/*TITLE*/
+			h1 {
+				color: #fff;
+				margin-bottom: 0;
+			}
+			#windows {
+				margin-top: 0;
+				color: #FFF;
+			}
+			/*APPS*/
+			h4 {
+				font-size: 14px;
+				background-color: #2E2E33;
+				color: #FFF;
+				padding: 5px 0 15px 0;
+				margin-bottom: 25px;
+				border-top: 1px solid #FFF;
+				border-bottom: 1px solid #FFF;
+			}
+			.apps {
+				color: #7CB9E8;
+			}
+			/*SOFTWARE*/
+			.container ul {
+				padding: 10px 10px 30px 10px;
+				margin: 0;
+			}
+			.container li {
+				list-style-type: none;
+				margin-top: 7px;
+			}
+			.category {
+				background-color: #2E2E33;
+				color: #FFF;
+				padding: 5px;
+			}
+			.category:first-of-type {
+				box-shadow: 0px -5px 5px #151517;
+			}
+			p {
+				margin: 0;
+			}
+			#audio {
+				background-color: #95CBFF;
+			}
+			#video {
+				background-color: #91CBCA;
+			}
+			#graphics {
+				background-color: #FECB98;
+			}
+			#internet {
+				background-color: #d6f1be;
+			}
+			#office {
+				background-color: #c2a8e4;
+			}
+			#gaming {
+				background-color: #FFEFC0;
+			}
+			#utilities {
+				background-color: #E995BA;
+			}
+			#develop {
+				background-color: #92D4F0;
+			}
+			.download {
+				width: 18px;
+			}
+			/*END*/
+			#end {
+				height: 10px;
+				background-color: #2E2E33;
+				box-shadow: 0 5px 5px #151517;
+			}
+			/*MOBILE*/
+			@media screen and (max-width: 670px) {
+				* {
+					scroll-margin-top: 7.1rem;
+				}
+				#back_top {
+					right: 0;
+					margin-right: 10px;
+				}
+				nav {
+					display: none;
+				}
+				#mobile_nav {
+					display: block;
+					height: 115px;
+				}
+				#mobile_nav a {
+					padding: 0 15px 0 15px;
+				}
+				.container {
+					padding-top: 115px;
+				}
+			}
+			@media screen and (max-width: 450px) {
+				#mobile_nav a {
+					padding: 0 10px 0 10px;
+				}
+			}
+			@media screen and (max-width: 350px) {
+				#upDivider {
+					display: block;
+				}
+				body {
+					background-color: #FFFAED;
+				}
+				#theBody {
+					border: 0;
+				}
+				.container {
+					padding-top: 0;
+				}
+				#mobile_nav {
+					display: none;
+				}
+				h1 {
+					margin-top: 0;
+					border-top: 1px solid #2E2E33;
+					padding: 10px 2px 2px 2px;
+				}
+				h4 {
+					padding: 2px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="theBody">
+			<div id="upDivider"><a class="home" href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="homeIMG"></a></div>
+			<nav>
+				<a class="home" href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="homeIMG"></a>
+				<div>
+					<a href="#01">01.AUDIO</a>
+					<a href="#02">02.VIDEO</a>
+					<a href="#03">03.GRAPHICS</a>
+					<a href="#04">04.INTERNET</a>
+				</div>
+				<div>
+					<a href="#05">05.OFFICE</a>
+					<a href="#06">06.GAMING</a>
+					<a href="#07">07.UTILITIES</a>
+					<a href="#08">08.DEVELOP</a>
+				</div>
+			</nav>
+			<nav id="mobile_nav">
+				<a class="home" href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="homeIMG"></a>
+				<div>
+					<a href="#01">01.AUDIO</a>
+					<a href="#02">02.VIDEO</a>
+					<a href="#03">03.GRAPHICS</a>
+				</div>
+				<div>
+					<a href="#04">04.INTERNET</a>
+					<a href="#05">05.OFFICE</a>
+					<a href="#06">06.GAMING</a>
+				</div>
+				<div>
+					<a href="#07">07.UTILITIES</a>
+					<a href="#08">08.DEVELOP</a>
+				</div>
+			</nav>
+			<div class="container">
+				<h1>SOFTWARE LIST</h1>
+				<h3 id="windows">(Windows 11 + WSL2 + WSA)</h3>
+				<h4>
+					<span class="apps">MICROSOFT STORE APPS</span><br><img src="img/microsoftStore.svg" alt="Microsoft Store" class="download">
+					<br><span class="apps">|</span> Alexa <span class="apps">|</span> Amazon Appstore <span class="apps">|</span> Dolby Access <span class="apps">|</span>
+					<br><span class="apps">|</span> EarTrumpet <span class="apps">|</span> Edge <span class="apps">|</span> Intel Unison <span class="apps">|</span>
+					<br><span class="apps">|</span> OneDrive <span class="apps">|</span> PowerShell <span class="apps">|</span> PowerToys <span class="apps">|</span> Xbox <span class="apps">|</span>
+				</h4>
+				<div class="category"><h3 id="01">01. AUDIO</h3></div>
+				<ul id="audio">
+					<li><b>Audacity</b>
+					<br><p>Audio editor | Open source | <a href="https://www.audacityteam.org/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Equalizer APO</b>
+					<br><p>Audio equalizer | Open source | <a href="https://equalizerapo.com/download.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>foobar2000</b>
+					<br><p>Audio player | <a href="https://www.foobar2000.org/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Peace</b>
+					<br><p>GUI for Equalizer APO | Open source | <a href="https://codecpack.co/download/Peace.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Spotify</b>
+					<br><p>Official Spotify client | <a href="https://www.spotify.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>TuneIn</b>
+					<br><p>Internet radio player | <a href="https://tunein.com/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="02">02. VIDEO</h3></div>
+				<ul id="video">
+					<li><b>DroidCam Client</b>
+					<br><p>Client for DroidCam(X) app | <a href="https://www.dev47apps.com/droidcam/windows/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>FreeTube</b>
+					<br><p>YouTube player | Open source | <a href="https://freetubeapp.io/#download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>HandBrake</b>
+					<br><p>Video transcoder | Open source | <a href="https://handbrake.fr/downloads.php" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>K-Lite Codec Pack Mega</b>
+					<br><p>Video filters, codecs and tools | <a href="https://codecguide.com/download_kl.htm" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>OBS</b>
+					<br><p>Video recording\live streaming | Open source | <a href="https://obsproject.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>OpenShot</b>
+					<br><p>Video editor | Open source | <a href="https://www.openshot.org/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>ShareX</b>
+					<br><p>Screen capture tool | Open source | <a href="https://getsharex.com/downloads" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>VLC</b>
+					<br><p>Video player | Open source | <a href="https://www.videolan.org/vlc/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="03">03. GRAPHICS</h3></div>
+				<ul id="graphics">
+					<li><b>Blender</b>
+					<br><p>3D creation suite | Open source | <a href="https://www.blender.org/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Gimp</b>
+					<br><p>Image editor | Open source | <a href="https://www.gimp.org/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Inkscape</b>
+					<br><p>Vector graphics editor | Open source | <a href="https://inkscape.org/release" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>IrfanView</b>
+					<br><p>Image viewer | <a href="https://www.irfanview.com/64bit.htm" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Paint.net</b>
+					<br><p>Image editor | <a href="https://www.getpaint.net/download.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="04">04. INTERNET</h3></div>
+				<ul id="internet">
+					<li><b>Authy</b>
+					<br><p>Two-factor authenticator | <a href="https://authy.com/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Bitwarden (Premium plan)</b>
+					<br><p>Password Manager | Open source | <a href="https://bitwarden.com/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Firefox</b>
+					<br><p>Web Browser | Open source | <a href="https://www.mozilla.org/firefox/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Malwarebytes Free</b>
+					<br><p>Security tool | <a href="https://www.malwarebytes.com/mwb-download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>OpenVPN Community</b>
+					<br><p>VPN connectivity tool | Open source | <a href="https://openvpn.net/community-downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Opera</b>
+					<br><p>Web Browser | <a href="https://www.opera.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Skype</b>
+					<br><p>Telecommunications app | <a href="https://www.skype.com/get-skype/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Teams</b>
+					<br><p>Communication platform | <a href="https://www.microsoft.com/microsoft-teams/download-app" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>TeamViewer</b>
+					<br><p>Remote desktop tool | <a href="https://www.teamviewer.com/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Thunderbird</b>
+					<br><p>Email client | Open source | <a href="https://www.thunderbird.net/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Tixati</b>
+					<br><p>Bittorrent client | <a href="https://www.tixati.com/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Zoom</b>
+					<br><p>Telecommunications app | <a href="https://zoom.us/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="05">05. OFFICE</h3></div>
+				<ul id="office">
+					<li><b>Kindle for PC</b>
+					<br><p>Desktop Kindle app | <a href="https://www.amazon.com/kindleapps" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>LibreOffice</b>
+					<br><p>Office suite | Open source | <a href="https://www.libreoffice.org/download/download-libreoffice/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Zoho Notebook</b>
+					<br><p>Note-taking app | <a href="https://www.zoho.com/it/notebook/notebook-for-windows.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Office 365 (Personal plan)</b>
+					<br><p>Office suite | <a href="https://www.office.com/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>PDFsam Basic</b>
+					<br><p>PDF editor | Open source | <a href="https://pdfsam.org/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>SumatraPDF</b>
+					<br><p>Document viewer | Open source | <a href="https://www.sumatrapdfreader.org/download-free-pdf-viewer" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="06">06. GAMING</h3></div>
+				<ul id="gaming">
+					<li><b>Amazon Games</b>
+					<br><p>Official Amazon client | <a href="https://www.amazongames.com/support/prime-gaming/articles/download-and-install-the-amazon-games-app" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Battle.net</b>
+					<br><p>Official Blizzard client | <a href="https://www.blizzard.com/apps/battle.net/desktop" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Discord</b>
+					<br><p>Communication platform | <a href="https://discord.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>EA App</b>
+					<br><p>Official EA client | <a href="https://www.ea.com/ea-app" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Epic Games Launcher</b>
+					<br><p>Official Epic client | <a href="https://store.epicgames.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>GOG Galaxy</b>
+					<br><p>Official CDProject client | <a href="https://www.gog.com/galaxy" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>RTSS</b>
+					<br><p>VGA utility | <a href="https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Steam</b>
+					<br><p>Official Valve client | <a href="https://store.steampowered.com/about/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Ubisoft Connect</b>
+					<br><p>Official Ubisoft client | <a href="https://ubisoftconnect.com/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="07">07. UTILITIES</h3></div>
+				<ul id="utilities">
+					<li><b>7-Zip</b>
+					<br><p>File archiver | Open source | <a href="https://www.7-zip.org/download.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>CPU-Z</b>
+					<br><p>Hardware monitoring | <a href="https://www.cpuid.com/softwares/cpu-z.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>CrystalDiskInfo</b>
+					<br><p>Disk information tool | <a href="https://crystalmark.info/en/software/crystaldiskinfo/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>GPU-Z</b>
+					<br><p>VGA information tool | <a href="https://www.techpowerup.com/gpuz/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>HWiNFO</b>
+					<br><p>Hardware monitoring | <a href="https://www.hwinfo.com/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>LatencyMon Home Ed.</b>
+					<br><p>Real-time audio suitability checker | <a href="https://www.resplendence.com/latencymon" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Pi Imager</b>
+					<br><p>Raspberry Pi imaging utility | Open source | <a href="https://www.raspberrypi.com/software/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>PuTTY</b>
+					<br><p>SSH and telnet client | Open source | <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Rufus</b>
+					<br><p>Bootable USB drives utility | Open source | <a href="https://rufus.ie/en/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Sysinternals Suite</b>
+					<br><p>Windows utilities | <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>TrafficMonitor</b>
+					<br><p>Monitoring tool | Open source | <a href="https://github.com/zhongyang219/TrafficMonitor/releases" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>TreeSize Free</b>
+					<br><p>Disk space manager | <a href="https://www.jam-software.com/treesize_free" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>WinMerge</b>
+					<br><p>Differencing and merging tool | Open source | <a href="https://winmerge.org/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>WinSCP</b>
+					<br><p>SFTP\FTP client | Open source | <a href="https://winscp.net/eng/downloads.php" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Wireshark</b>
+					<br><p>Network protocol analyzer | Open source | <a href="https://www.wireshark.org/download.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div class="category"><h3 id="08">08. DEVELOP</h3></div>
+				<ul id="develop">
+					<li><b>Android Studio</b>
+					<br><p>Android IDE | Open source | <a href="https://developer.android.com/studio" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Apache Maven</b>
+					<br><p>Build automation tool | Open source | <a href="https://maven.apache.org/download.cgi" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>DBeaver CE</b>
+					<br><p>Database tool | Open source | <a href="https://dbeaver.io/download/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>DbSchema CE</b>
+					<br><p>Database design tool | <a href="https://dbschema.com/editions.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Docker Desktop</b>
+					<br><p>Containerized applications | <a href="https://www.docker.com/products/docker-desktop/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Eclipse Enterprise Java\Web Developers</b>
+					<br><p>IDE | Open source | <a href="https://www.eclipse.org/downloads/packages/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Git</b>
+					<br><p>Distributed ver. control system | Open source | <a href="https://git-scm.com/downloads" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Lombok</b>
+					<br><p>Java library | Open source | <a href="https://projectlombok.org/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>.NET SDK</b>
+					<br><p>Developer platform | Open source | <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Notepad++</b>
+					<br><p>Source code editor\notepad | Open source | <a href="https://notepad-plus-plus.org/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>NVM for Windows</b>
+					<br><p>Manage Node.js versions | Open source | <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>OpenJDK (Microsoft Build)</b>
+					<br><p>Microsoft build of OpenJDK | Open source | <a href="https://learn.microsoft.com/en-us/java/openjdk/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>		
+					<li><b>Postman</b>
+					<br><p>API platform | <a href="https://www.postman.com/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Python</b>
+					<br><p>Programming language | Open source | <a href="https://www.python.org/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>SmartGit (old 21.1.7)</b>
+					<br><p>Git GUI client | <a href="https://www.syntevo.com/smartgit/download/archive/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Sourcetree</b>
+					<br><p>Git GUI client | <a href="https://www.sourcetreeapp.com/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Swagger</b>
+					<br><p>API tool | Open source | <a href="https://github.com/swagger-api/swagger-editor/releases" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>TortoiseSVN</b>
+					<br><p>Subversion client | Open source | <a href="https://tortoisesvn.net/downloads.html" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Unity Hub</b>
+					<br><p>Manage Unity projects\installations | <a href="https://unity.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Visual Studio Community</b>
+					<br><p>IDE | <a href="https://visualstudio.microsoft.com/downloads/" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+					<li><b>Visual Studio Code</b>
+					<br><p>Source code editor | <a href="https://code.visualstudio.com/download" target="_blank"><img src="img/download.png" alt="download" class="download"></a></p></li>
+				</ul>
+				<div id="end"></div>
+				<br>
+				<div onclick="topFunction()" id="back_top"><img src="img/up.png" alt="up" class="download"></div>
+			</div>
+		</div>
+		<script>
+			function watchForHover() {
+			  let lastTouchTime = 0
+
+			  function enableHover() {
+				if (new Date() - lastTouchTime < 500) return
+				document.body.classList.add('hasHover')
+			  }
+
+			  function disableHover() {
+				document.body.classList.remove('hasHover')
+			  }
+
+			  function updateLastTouchTime() {
+				lastTouchTime = new Date()
+			  }
+
+			  document.addEventListener('touchstart', updateLastTouchTime, true)
+			  document.addEventListener('touchstart', disableHover, true)
+			  document.addEventListener('mousemove', enableHover, true)
+
+			  enableHover()
+			};
+			function scrollFunction() {
+			  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			};
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			};
+			
+			watchForHover();
+			
+			let mybutton = document.getElementById("back_top");
+			window.onscroll = function() {scrollFunction()};
+		</script>
+	</body>
+</html>
