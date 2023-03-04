@@ -18,6 +18,7 @@
 			html {
 				background-color: #cfd3f0;
 				text-align: center;
+				cursor: default;
 			}
 			body {
 				color: #fff;
@@ -28,6 +29,7 @@
 				max-width: 790px;
 				min-height: 100vh;
 				padding: 0;
+				border-bottom: 30px solid #2E2E33;
 			}
 			#theBody {
 				margin: 0 auto;
@@ -36,27 +38,22 @@
 				border: 1px solid black;
 				max-width: 790px;
 			}
-			.upDivider {
+			#upDivider {
 				max-width: 790px;
 				width: 100%;
-				height: 30px;
+				height: 50px;
 				background-color: #2E2E33;
 				box-shadow: 0 5px 5px #151517;
 			}
 			.home {
+				margin-top: 10px;
 				width: 18px;
 				padding: 7px 5px 5px 5px;
-			}
-			.upDivider:last-of-type {
-				position: fixed;
-				bottom: 0;
-				box-shadow: 0 -5px 5px #151517;
 			}
 			h1 {
 				position: relative;
 				animation-name: animation;
 				animation-duration: 10s;
-				cursor: default;
 				padding: 2px;
 			}
 			h3 {
@@ -136,7 +133,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="upDivider"><a href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="home"></a></div>
+		<div id="upDivider"><a href="https://bobbydeveloper.com"><img src="img/home.png" alt="home" class="home"></a></div>
 		<h1>Bobby developer</h1>
 		<h3><hr>
 			<i>Hello! Why are you here?
@@ -147,7 +144,7 @@
 			<br><a href="builds.html">BUILDS <img src="img/builds.png" alt="builds" class="image"></a>
 			<br><a href="software.html">SOFTWARE <img src="img/software.png" alt="software" class="image"></a>
 			<br><a href="pictures.html">PICTURES <img src="img/pictures.png" alt="pictures" class="image"></a>
-			<br><a href="deck.html">STEAM DECK <img src="img/games.png" alt="games" class="image"></a>
+			<br><a href="games.html">GAMES <img src="img/games.png" alt="games" class="image"></a>
 			<br><br>
 		</div>
 		<div class="contact">
@@ -180,6 +177,5 @@
 			  <button id="button" type="submit">Send</button>
 			</form>
 		</div>
-		<div class="upDivider"></div>
 	</body>
 </html>
