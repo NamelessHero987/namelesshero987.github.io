@@ -81,14 +81,6 @@
 				border-bottom: 1px solid #FFF;
 			}
 			/*BUILDS*/
-			.container ul {
-				margin: 0;
-				padding: 10px 10px 30px 10px;
-			}
-			.container li {
-				list-style-type: none;
-				margin-top: 7px;
-			}
 			#firstBuild {
 				box-shadow: 0px -5px 5px #151517;
 				background-color: #2E2E33;
@@ -108,22 +100,24 @@
 				color: #ffffffc9;
 				font-weight: 350;
 			}
-			#microatx {
+			#microatx, #laptop {
 				color: #fff;
 				width: 100%;
-				background-color: #509785;
 				padding: 10px 0 10px 0;
 				border-collapse: collapse;
 				line-height: 2rem;
 			}
-			#microatx tr {
-				border-bottom: 1px solid #2E2E33;
-			}
-			#microatx tr:last-of-type {
-				border-bottom: none;
+			#microatx {
+				background-color: #509785;
 			}
 			#laptop {
-				background-color: #91CBCA;
+				background-color: #be5784;
+			}
+			#microatx tr, #laptop tr {
+				border-bottom: 1px solid #2E2E33;
+			}
+			#microatx tr:last-of-type, #laptop  tr:last-of-type {
+				border-bottom: none;
 			}
 			#itx {
 				background-color: #E995BA;
@@ -174,7 +168,7 @@
 					</tr>
 					<tr>
 						<th><b>MB</b></th>
-						<th><p>MSI B550M PRO-VDH WIFI</p></th>
+						<th><p>MSI B550M PRO-VDH WIFI<br>(AGESA 1.2.0.8)</p></th>
 					</tr>
 					<tr>
 						<th><b>CPU</b></th>
@@ -186,7 +180,7 @@
 					</tr>
 					<tr>
 						<th><b>RAM</b></th>
-						<th><p>Kingston 2x16GB 3600 CL16</p></th>
+						<th><p>Kingston 2x16GB 2R 3600 CL16</p></th>
 					</tr>
 					<tr>
 						<th><b>VGA</b></th>
@@ -202,15 +196,21 @@
 						<th><p>Crucial MX500 1TB</p></th>
 					</tr>
 					<tr>
-						<th><b>DAC & AMP</b></th>
-						<th><p>SMSL M100 MKII + Topping L50
-						<br>Creative G6</p></th>
+						<th><b>DAC</b></th>
+						<th><p>SMSL M100 MKII</p></th>
 					</tr>
 					<tr>
-						<th><b>HEADPHONES<br>& MIC</b></th>
+						<th><b>HEADPHONE AMP</b></th>
+						<th><p>Topping L50</p></th>
+					</tr>
+					<tr>
+						<th><b>HEADPHONES</b></th>
 						<th><p>Beyerdynamic 770Pro 250 Ohm
-						<br>Fidelio X2HR/00 + VMODA BoomPro
-						<br>Blue Snowball</p></th>
+						<br>Fidelio X2HR/00</p></th>
+					</tr>
+					<tr>
+						<th><b>MICROPHONE</b></th>
+						<th><p>Blue Snowball</p></th>
 					</tr>
 					<tr>
 						<th><b>SPEAKERS</b></th>
@@ -226,26 +226,54 @@
 					</tr>
 				</table>
 				<div class="category"><h3 id="02">The Notebook</h3></div>
-				<ul id="laptop">
-					<li><b>MODEL</b>
-					<br><p>IdeaPad Gaming 3 15ARH05</p></li>
-					<li><b>CPU</b>
-					<br><p>AMD Ryzen 7 4800H (Zen2 8/16)</p></li>
-					<li><b>RAM</b>
-					<br><p>Crucial 2x16GB 2R 3200 CL22</p></li>
-					<li><b>VGA</b>
-					<br><p>NVIDIA 1650Ti 4GB GDDR6</p></li>
-					<li><b>NVMe</b>
-					<br><p>SK Hynix 512GB</p></li>
-					<li><b>SSD</b>
-					<br><p>WD Green 480GB</p></li>
-					<li><b>OS</b>
-					<br><p>Windows 11 Home</p></li>
-					<li><b>OTHER</b>
-					<br><p>PSU 135W - Display 15.6'' IPS FHD 60Hz
-						<br>BT 5.1 - WiFi AC - LAN1000 - WebCam 720p
-						<br>Blue Backlit Keyboard</p></li>
-				</ul>
+				<table id="laptop">
+					<tr>
+						<th><b>MODEL</b></th>
+						<th><p>IdeaPad Gaming 3 15ARH05</p></th>
+					</tr>
+					<tr>
+						<th><b>CPU</b></th>
+						<th><p>AMD Ryzen 7 4800H (Zen2 8/16)</p></th>
+					</tr>
+					<tr>
+						<th><b>RAM</b></th>
+						<th><p>Crucial 2x16GB 2R 3200 CL22</p></th>
+					</tr>
+					<tr>
+						<th><b>VGA</b></th>
+						<th><p>NVIDIA 1650Ti 4GB GDDR6</p></th>
+					</tr>
+					<tr>
+						<th><b>NVMe</b></th>
+						<th><p>SK Hynix 512GB (gen3)</p></th>
+					</tr>
+					<tr>
+						<th><b>SSD</b></th>
+						<th><p>WD Green 480GB</p></th>
+					</tr>
+					<tr>
+						<th><b>HEADPHONES</b></th>
+						<th><p></p></th>
+					</tr>
+					<tr>
+						<th><b>SPEAKERS</b></th>
+						<th><p>Bose </p></th>
+					</tr>
+					<tr>
+						<th><b>MONITOR</b></th>
+						<th><p>Benq EX2510S (IPS FHD 24,5" 165Hz)</p></th>
+					</tr>
+					<tr>
+						<th><b>OS</b></th>
+						<th><p>Windows 11 Home</p></th>
+					</tr>
+					<tr>
+						<th><b>OTHER</b></th>
+						<th><p>PSU135W - Display 15.6 IPS FHD 60Hz
+						<br>BT5.1 - WiFi AC - LAN1000
+						<br>WebCam 720p - Blue Backlit Keyboard</p></th>
+					</tr>
+				</table>
 				<div class="category"><h3 id="07">The MiniITX</h3></div>
 				<ul id="itx">
 					<li><b>Work in progress...</b>
